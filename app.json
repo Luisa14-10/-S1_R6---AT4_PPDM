@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Meu Gravador",
+    "slug": "meu-gravador",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/logo.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#1E1B4B"
+        }
+      ],
+      ["expo-av", { "microphonePermission": "Permitir que o Meu Gravador use o microfone para gravar sua voz." }]
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.meugravador.app",
+      "infoPlist": { "NSMicrophoneUsageDescription": "Usado para gravar suas notas de voz." }
+    },
+    "android": {
+      "package": "com.meugravador.app",
+      "permissions": ["RECORD_AUDIO"]
+    }
+  }
+}
